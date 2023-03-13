@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { Form, Field, ErrorMessage } from 'formik';
 
-export const Searchbar = styled.div`
+export const Header = styled.header`
   top: 0;
   left: 0;
   position: sticky;
@@ -13,28 +14,29 @@ export const Searchbar = styled.div`
   padding-left: 24px;
   padding-top: 12px;
   padding-bottom: 12px;
-  color: #fff;
-  background-color: #3f51b5;
+  color: #000000;
+  background-color: #ffffff;
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
     0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
 `;
 
-export const SearchForm = styled.div`
+export const SearchForm = styled(Form)`
   display: flex;
   align-items: center;
   width: 100%;
   max-width: 600px;
-  background-color: #fff;
+  background-color: #dddddd;
   border-radius: 3px;
   overflow: hidden;
 `;
 
-export const SearchFormButton = styled.div`
-  display: inline-block;
+export const SearchFormButton = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 48px;
   height: 48px;
   border: 0;
-  background-image: url('https://image.flaticon.com/icons/svg/149/149852.svg');
   background-size: 40%;
   background-repeat: no-repeat;
   background-position: center;
@@ -43,34 +45,28 @@ export const SearchFormButton = styled.div`
   cursor: pointer;
   outline: none;
 
-  :hover {
+  font-size: 28px;
+
+  &:hover {
     opacity: 1;
   }
 `;
 
-export const SearchFormButtonLabel = styled.div`
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  clip-path: inset(50%);
-  border: 0;
-`;
-
-export const SearchFormInput = styled.div`
-  display: flex;
-  align-items: center;
+export const SearchFormInput = styled(Field)`
+  display: inline-block;
   width: 100%;
-  max-width: 600px;
-  background-color: #fff;
-  border-radius: 3px;
-  overflow: hidden;
-
-  ::placeholder {
-    font: inherit;
+  font: inherit;
+  font-size: 20px;
+  background-color: #dddddd;
+  border: none;
+  outline: none;
+  padding: 4px;
+  margin-left: 4px;
+  &:placeholder {
     font-size: 18px;
   }
+`;
+
+export const ErrorText = styled(ErrorMessage)`
+  color: #ff7979;
 `;
