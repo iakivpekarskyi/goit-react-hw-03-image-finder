@@ -56,17 +56,19 @@ export const SearchFormInput = styled(Field)`
   display: inline-block;
   width: 100%;
   font: inherit;
-  font-size: 20px;
+  font-size: 18px;
   background-color: #dddddd;
   border: none;
   outline: none;
   padding: 4px;
   margin-left: 4px;
-  &:placeholder {
+  &::placeholder {
+    font: inherit;
     font-size: 18px;
   }
 `;
 
 export const ErrorText = styled(ErrorMessage)`
   color: #ff7979;
+  width: 100%;
 `;

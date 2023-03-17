@@ -1,7 +1,7 @@
-import { BsSearch } from 'react-icons/bs';
-import { Formik } from 'formik';
 import PropTypes from 'prop-types';
+import { Formik } from 'formik';
 import * as Yup from 'yup';
+import { BsSearch } from 'react-icons/bs';
 
 import {
   Header,
@@ -12,7 +12,7 @@ import {
 } from './Searchbar.styled';
 
 const validationSchema = Yup.object().shape({
-  searchInput: Yup.string().required('Required'),
+  searchInput: Yup.string().required('You need to type something'),
 });
 
 export const Searchbar = ({ handleSearch }) => {
