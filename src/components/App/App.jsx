@@ -55,6 +55,9 @@ export class App extends Component {
   handleSearch = searchInput => {
     const { inputValue } = this.state;
     if (inputValue === searchInput) {
+      Notiflix.Notify.info(
+        `Your request "${searchInput}" has already been completed! :-)`
+      );
       return;
     }
     this.setState({ gallery: [], inputValue: searchInput, page: 1 });

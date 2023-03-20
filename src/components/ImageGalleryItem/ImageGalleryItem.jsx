@@ -2,10 +2,7 @@ import { GalleryItem, GalleryImage } from './ImageGalleryItem.styled';
 
 export const ImageGalleryItem = ({ image, openModal, getModalUrl }) => {
   return (
-    <GalleryItem
-      key={image.id}
-      onClick={() => getModalUrl(image.largeImageURL)}
-    >
+    <GalleryItem onClick={() => getModalUrl(image.largeImageURL)}>
       <GalleryImage
         src={image.webformatURL}
         alt={image.tags}
