@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ImageGalleryItem = styled.div`
+export const GalleryItem = styled.div`
   display: grid;
   max-width: calc(100vw - 48px);
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -13,7 +13,7 @@ export const ImageGalleryItem = styled.div`
   margin-right: auto;
 `;
 
-export const ImageGalleryItemImage = styled.div`
+export const GalleryImage = styled.div`
   width: 100%;
   height: 260px;
   object-fit: cover;
